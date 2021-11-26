@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+#spaceship {
+  animation: spaceship 10s ease-in-out;
+}
+
+@keyframes spaceship {
+  0%,
+  100% {
+    transform: translateY(-330px);
+  }
+  30% {
+    transform: translateY(50px);
+  }
+  70% {
+    transform: translateY(50px);
+  }
+}
+
+#rays {
+  animation: rays 10s linear;
+  transform: translateY(50px);
+}
+
+@keyframes rays {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  35%,
+  45%,
+  55%,
+  65% {
+    opacity: 1;
+    fill: red;
+  }
+  40%,
+  50%,
+  60% {
+    fill: #6c63ff;
+  }
+  70%,
+  100% {
+    opacity: 0;
+  }
+}
+
+#c1 {
+  animation: c1 10s linear;
+}
+@keyframes c1 {
+  35% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+#c1-l-arm {
+  animation: c1LeftArm 10s linear;
+  transform-origin: right top;
+  transform-box: fill-box;
+}
+#c1-r-arm {
+  animation: c1RightArm 10s linear;
+  transform-origin: left top;
+  transform-box: fill-box;
+}
+
+@keyframes c1LeftArm {
+  35% {
+    transform: rotate(0);
+  }
+  40%,
+  100% {
+    transform: rotate(70deg);
+  }
+}
+@keyframes c1RightArm {
+  35% {
+    transform: rotate(0);
+  }
+  40%,
+  100% {
+    transform: rotate(-70deg);
+  }
+}
+
+#c1-l-leg,
+#c1-r-leg {
+  animation: c1Legs 10s linear;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes c1Legs {
+  35% {
+    transform: rotate(0);
+  }
+  40%,
+  44%,
+  48%,
+  52%,
+  56%,
+  60% {
+    transform: rotate(20deg);
+  }
+  42%,
+  46%,
+  50%,
+  54%,
+  58% {
+    transform: rotate(-20deg);
+  }
+}
+
+#c1-mouth {
+  animation: c1Mouth 10s linear;
+}
+
+@keyframes c1Mouth {
+  25%,
+  100% {
+    d: path(
+      "M339.785 698.394C340.24 699.763 340.032 702.595 338.585 703.739C337.138 704.883 334.92 705.666 332.418 705.915C329.917 706.164 327.337 705.86 325.246 705.068C323.155 704.276 322.147 703.042 321.269 701.693L320.132 699.661C319.188 696.81 323.46 692.583 328.195 691.21C332.929 689.837 338.842 695.542 339.785 698.394Z"
+    );
+  }
+}
+
+#c2-mouth {
+  animation: c2Mouth 10s linear;
+}
+
+@keyframes c2Mouth {
+  25%,
+  100% {
+    d: path(
+      "M542.299 696.368C545.613 696.368 548.299 693.682 548.299 690.368C548.299 687.054 545.613 684.5 542.299 684.5C538.985 684.5 536.299 687.054 536.299 690.368C536.299 693.682 538.985 696.368 542.299 696.368Z"
+    );
+  }
+}
+
+#c1-eye-i {
+  animation: eye1 10s linear;
+}
+
+@keyframes eye1 {
+  25%,
+  100% {
+    transform: translate(-5px, -5px);
+  }
+}
+#c2-eye-i {
+  animation: eye2 10s linear;
+}
+
+@keyframes eye2 {
+  25%,
+  100% {
+    transform: translate(1px, -6px);
+  }
+}
+
+#c2-l-arm {
+  animation: c2Arm 10s linear;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes c2Arm {
+  40% {
+    transform: rotate(0);
+  }
+  45%,
+  100% {
+    transform: rotate(70deg);
+  }
+}
